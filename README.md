@@ -6,6 +6,20 @@ Various bookmarklets I've used.
 
 This is a blog with many fine articles on nutrition. I love it but Tom Naughton didn't like the format of block quotes, so he created his own by surrounding the text with a span and setting the color to `#800000` which is some sort of dark read. I sent him the CSS to add at the end of the theme's style.css file, but he is afraid of breaking the blog.
 
+```css
+/*
+ * Target block quotes in posts and set it to look like Tom's quotes.
+ */
+.entry blockquote {
+	margin: 0;    /* get rid of the indent on some browsers. */
+	padding: 0;  /* get rid of the indent on other browsers. */
+	background: transparent; /* Make the background color the same as the post. */
+	border-width: 0;  /* Remove the odd dashed borders. */
+	font-style: normal; /* Change the font from italic to normal. */
+	color: #800;  /* Shorthand for #800000. */
+}
+````
+
 The problem is when you are reading a post on an iPhone and use the Readability button. The block quotes disappear because colors are removed from the text.
 
 What this bookmarklet does is add a style that overwrites the `blockquote` styles, then looks for any `<span>` elements that immediately follow a paragraph. It then looks at the style attribute of each `<span>` and if the style attribute is equal to `"color: #800000;"` wraps the paragraph with a `<blockquote>` element.
