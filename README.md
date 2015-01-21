@@ -4,7 +4,7 @@ Various bookmarklets I've used.
 
 ## [Fat Head](http://www.fathead-movie.com/)
 
-This is a blog with many fine articles on nutrition. I love it but Tom Naughton didn't like the format of block quotes, so he created his own by surrounding the text with a span and setting the color to `#800000` which is some sort of dark read.
+This is a blog with many fine articles on nutrition. I love it but Tom Naughton didn't like the format of block quotes, so he created his own by surrounding the text with a span and setting the color to `#800000` which is some sort of dark read. I sent him the CSS to add at the end of the theme's style.css file, but he is afraid of breaking the blog.
 
 The problem is when you are reading a post on an iPhone and use the Readability button. The block quotes disappear because colors are removed from the text.
 
