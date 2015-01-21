@@ -10,7 +10,7 @@ The problem is when you are reading a post on an iPhone and use the Readability 
 
 What this bookmarklet does is add a style that overwrites the `blockquote` styles, then looks for any `<span>` elements that immediately follow a paragraph. It then looks at the style attribute of each `<span>` and if the style attribute is equal to `"color: #800000;"` wraps the paragraph with a `<blockquote>` element.
 
-After running this [bookmarklet][1] you can press the Readability button and differentiate between block quotes and the rest of the text.
+After running this <a href="javascript:(function(%24)%7B%27use%20strict%27%3Bvar%20sa%3D%24(%22.entry%22).find(%22p%20%3E%20span%22)%2Cstyle%3D%27.entry%20blockquote%20%7Bmargin%3A%200%3Bpadding%3A%200%3Bbackground%3A%20transparent%3Bborder-width%3A%200%3Bfont-style%3A%20normal%3Bcolor%3A%20%23800%3B%7D%27%3B%24(%22body%22).append(%22%3Cstyle%3E%22%2Bstyle%2B%22%3C%2Fstyle%3E%22)%3Bsa.each(function(index)%7Bvar%20%24this%3D%24(this)%2Cp%3D%24this.parent()%3Bif(%24this.attr(%22style%22)%3D%3D%3D%22color%3A%20%23800000%3B%22)%7Bp.wrap(%22%3Cblockquote%3E%3C%2Fblockquote%3E%22)%3B%7D%7D)%3B%7D(jQuery))">bookmarklet</a> you can press the Readability button and differentiate between block quotes and the rest of the text.
 
 ## Find
 
