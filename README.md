@@ -16,6 +16,25 @@ After running this [bookmarklet][1] you can press the Readability button and dif
 
 iOS used to not have a find on webpage function. This [bookmarklet][2] will open a prompt then search the text of the body of the webpage for the search text. It will then wrap the text with a `<span style="background:#ff0;color:#000">` element and scroll the page to the first element. Each found item will have a yellow background with black text.
 
+I had found a find bookmarklet but it modified the text of all the html and replaced the html. It didn't always work well.
+
+```javascript
+void(searchText = prompt('Find text:', ''));
+searchText = '(' + searchText + ')';
+regex = new RegExp(searchText, 'gi');
+randomNumber = Math.floor(Math.random() * 100);
+randomID = 'z' + randomNumber;
+body = document.body.innerHTML;
+body = body.replace(regex, '<span name=' + randomID + ' id=' + randomID + ' style=\'color:#000;background-color:yellow; font-weight:bold;\'>$1</span>');
+void(document.body.innerHTML = body);
+alert('Found ' + document.getElementsByName(randomID).length + ' matches.');
+window.scrollTo(0, document.getElementsByName(randomID)[0].offsetTop);
+````
+
+You can [Search for Text on a Web Page in Safari with iOS 8 and iOS 7](http://osxdaily.com/2013/10/03/search-text-web-page-safari-ios/), it just takes a little extra work.
+
+I did try to create an enhanced version of find that adds a navigation bar at the bottom of the page, but it turned out to be too large for a bookmarklet.
+
 ## Issues
 
 Have a bug? Please create an [issue](https://github.com/tannyo/bookmarklets/issues) here on GitHub!
