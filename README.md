@@ -33,7 +33,7 @@ window.scrollTo(0, document.getElementsByName(randomID)[0].offsetTop);
 
 You can [Search for Text on a Web Page in Safari with iOS 8 and iOS 7](http://osxdaily.com/2013/10/03/search-text-web-page-safari-ios/), it just takes a little extra work.
 
-I did try to create an enhanced version of find that adds a navigation bar at the bottom of the page, but it turned out to be too large for a bookmarklet.
+I did try to create an enhanced version of find that adds a navigation bar at the bottom of the page, but it turned out to be too large for a bookmarklet. I may find a place to host the [find-plus.js](https://github.com/tannyo/bookmarklets/blob/master/find-plus.js) file and create a bookmarklet to add the script, but since the functionality is already in Mobile Safari, though hidden and a little clunky to use, I probably won't.
 
 ## Issues
 
