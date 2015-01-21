@@ -20,7 +20,7 @@ This is a blog with many fine articles on nutrition. I love it but Tom Naughton 
 }
 ````
 
-The problem is when you are reading a post on an iPhone and use the Readability button. The block quotes disappear because colors are removed from the text.
+The problem is when you are reading a post on an iPhone and use the Readability button. The block quotes disappear because colors are removed from the text and they aren't really block quotes. They are different colored text in a paragraph.
 
 What this bookmarklet does is add a style that overwrites the `blockquote` styles, then looks for any `<span>` elements that immediately follow a paragraph. It then looks at the style attribute of each `<span>` and if the style attribute is equal to `"color: #800000;"` wraps the paragraph with a `<blockquote>` element.
 
