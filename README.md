@@ -49,7 +49,7 @@ alert('Found ' + document.getElementsByName(randomID).length + ' matches.');
 window.scrollTo(0, document.getElementsByName(randomID)[0].offsetTop);
 ````
 
-So I rewrote it so that it adds DOM elements instead of replacing the HTML.
+So I rewrote it as [find.js](https://github.com/tannyo/bookmarklets/blob/master/find.js) so that it adds DOM elements instead of replacing the HTML.
 
 ````
 javascript:(function(t)%7B%22use%20strict%22%3Bfunction%20i(e)%7Breturn%27%3Cspan%20name%3D%22%27%2Bn%2B%27%22%20style%3D%22background%3A%23ff0%3Bcolor%3A%23000%22%3E%27%2Be%2B%22%3C%2Fspan%3E%22%7Dfunction%20s(e%2Ct)%7Bfunction%20c()%7Bvar%20e%3Da.data.replace(n%2Ci)%2Ct%3Ddocument.createElement(%22div%22)%2Cr%3Ddocument.createDocumentFragment()%3Bt.innerHTML%3De%3Bwhile(t.firstChild)%7Br.appendChild(t.firstChild)%7Dreturn%20r%7Dvar%20n%3Dnew%20RegExp(e%2C%22gi%22)%2Cr%3D(t%7C%7Cdocument.body).childNodes%2Co%3Dr%3Fr.length%3A0%2Cu%3D%2F%5E(script%7Cobject%7Ciframe)%24%2Fi%2Ca%2Cf%2Cl%3Bwhile(o--)%7Ba%3Dr%5Bo%5D%3Bif(a.nodeType%3D%3D%3D1%26%26!u.test(a.nodeName))%7Bs(e%2Ca)%7Delse%20if(a.nodeType%3D%3D%3D3%26%26n.test(a.data))%7Bf%3Da.parentNode%3Bl%3Dc()%3Bf.insertBefore(l%2Ca)%3Bf.removeChild(a)%7D%7D%7Dvar%20n%3D%22z%22%2BMath.floor(Math.random()*100)%2Cr%3Bif(t)%7Bs(t)%3Balert(%22Found%20%22%2B(r%3Ddocument.getElementsByName(n)).length%2B%22%20matches.%22)%3Bwindow.scrollTo(0%2Cr%5B0%5D.offsetTop)%7D%7D)(prompt(%22Find%3A%22%2C%22%22))
