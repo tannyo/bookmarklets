@@ -4,7 +4,7 @@ Various bookmarklets I've used.
 
 ## [Fat Head](http://www.fathead-movie.com/)
 
-This is a blog with many fine articles on nutrition. I love it but Tom Naughton didn't like the format of block quotes, so he created his own by surrounding the text with a span and setting the color to `#800000` which is some sort of dark read. I sent him the CSS to add at the end of the theme's style.css file, but he is afraid of breaking the blog.
+This is a blog with many fine articles on nutrition. I love it but Tom Naughton didn't like the format of block quotes, so he created his own by surrounding the text with a span and setting the color to `#800000` which is some sort of dark red. I sent him the CSS to add at the end of the theme's style.css file, but he is afraid of breaking the blog.
 
 ```css
 /*
@@ -58,6 +58,16 @@ javascript:(function(t)%7B%22use%20strict%22%3Bfunction%20i(e)%7Breturn%27%3Cspa
 You can [Search for Text on a Web Page in Safari with iOS 8 and iOS 7](http://osxdaily.com/2013/10/03/search-text-web-page-safari-ios/), it just takes a little extra work.
 
 I did try to create an enhanced version of find that adds a navigation bar at the bottom of the page, but it turned out to be too large for a bookmarklet. I may find a place to host the [find-plus.js](https://github.com/tannyo/bookmarklets/blob/master/find-plus.js) file and create a bookmarklet to add the script, but since the functionality is already in Mobile Safari, though hidden and a little clunky to use, I probably won't.
+
+## Patterico
+
+Some of the commentors can be insulting and not listen to reasoned argument. This bookmarklet allows you to specify a group of names to hide the contents of the comments. It creates a toggle so that the viewer can see the comment if they so desire.
+
+Change the names putting a vertical bar (|) between each name. In the case I'm hiding happyfeet and jmann's comments.
+
+````
+javascript:(function($){'use strict';var n=/^(happyfeet|jmann)/i,aa=$(".fn"),end=aa.length,i,el,v,p;for(i=0;i<end;i++){el=$(aa[i]);v=el.text();if(n.test(v)){p=el.parents(".comment-body");p.children().not("span,br,.reply").hide();p.css("padding","1em 0 0 3em");p.css("cursor","pointer");p.click(function(){if($(this).children()[0].style.display==="none"){$(this).children().not("span,br,.reply").show();$(this).css("padding","");}else{$(this).children().not("span,br,.reply").hide();$(this).css("padding","1em 0 0 3em");}});}}}(jQuery));
+````
 
 ## Issues
 
