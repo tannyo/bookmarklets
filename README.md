@@ -79,6 +79,7 @@ Want to contribute? Great! Just fork the project, make your changes and open a [
 
 ## Changelog
 * 2015-01-20 TKO Created by Tanny O'Haley.
+* 2015-09-21 TKO Added Patterico bookmarklet.
 
 ## License
 
