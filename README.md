@@ -63,7 +63,7 @@ I did try to create an enhanced version of find that adds a navigation bar at th
 
 Some of the commentors can be insulting and not listen to reasoned argument. This bookmarklet allows you to specify a group of names to hide the contents of the comments, leaving just the name and id. It creates a toggle so that the viewer can see the comment if they so desire.
 
-Change the names putting a vertical bar (|) between each name. In the case I'm hiding happyfeet and jmann's comments. Copy the text below into a bookmark. Go to the http://patterico.com website, view an article and select the saved bookmark to hide the comments.
+Change the names putting a vertical bar (|) between each name. In the case I'm hiding happyfeet and jmann's comments. Copy the text below into the URL field of a bookmark. Go to the http://patterico.com website, view an article and select the saved bookmark to hide the comments.
 
 ````
 javascript:(function($){'use strict';var n=/^(happyfeet|jmann)/i,aa=$(".fn"),end=aa.length,i,el,v,p;for(i=0;i<end;i++){el=$(aa[i]);v=el.text();if(n.test(v)){p=el.parents(".comment-body");p.children().not("span,br,.reply").hide();p.css("padding","1em 0 0 3em");p.css("cursor","pointer");p.click(function(){if($(this).children()[0].style.display==="none"){$(this).children().not("span,br,.reply").show();$(this).css("padding","");}else{$(this).children().not("span,br,.reply").hide();$(this).css("padding","1em 0 0 3em");}});}}}(jQuery));
